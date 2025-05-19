@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="https://kit.fontawesome.com/0f286be12c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Maqueta Proyecto</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img class="logo-header" src="./images/logo.svg" alt="logo"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#index.html">Productos</a>
+                </li>
+                <li>
+                    <a href="#reseñas">Reseñas</a>
+                </li>
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+                
+            </ul>
+
+            <div class="carrito">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main id="main">
+        <div class="productos">
+            <div class="producto">
+                <img src="./images/imagenes-zapatillas/zapatilla-1.png" alt="Zapatilla 1">
+                <h3>Nike Air Jordan 1 High de Travis Scott</h3>
+                
+                <p>Precio: $200</p>
+                <button class="button">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/imagenes-zapatillas/zapatilla-2.png" alt="Zapatilla 2">
+                <h3>Air Jordan 1 Low 'Legend Coffee'</h3>
+                
+                <p>Precio: $120</p>
+                <button class="button">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/imagenes-zapatillas/zapatilla-3.png" alt="Zapatilla 3">
+                <h3>Bad Bunny "The First Cafe"</h3>
+            
+                <p>Precio: $150</p>
+                <button class="button">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/imagenes-zapatillas/zapatilla-4.png" alt="Zapatilla 4">
+                <h3>Zapatillas Puma Palermo</h3>
+                
+                <p>Precio: $130</p>
+                <button class="button">Agregar al Carrito</button>
+            </div>
+        </div>
+            <div class="button-ver-mas">
+                <button class="button2">Ver más productos</button>
+            </div>
+    </main>
+
+    <section id="reseñas">
+        <h2 class="subtitle">Lo que dicen nuestros clientes</h2>
+        <div class="reseñas">
+            
+            <div class="reseña">
+                <img src="./images/imagenes-reseñas/Imagen-perfil-1.jpg" alt="">
+                <p>"Excelente calidad y diseño. Definitivamente volveré a comprar."</p>
+            </div>
+            <div class="reseña">
+                <img src="./images/imagenes-reseñas/Imagen-perfil-2.jpg" alt="">
+                <p>"El servicio al cliente fue excepcional. Muy satisfecho con mi compra."</p>
+            </div>
+            <div class="reseña">
+                <img src="./images/imagenes-reseñas/Imagen-perfil-3.avif" alt="">
+                <p>"Un 10/10, el precio y calidad si que valen la pena!"</p>
+            </div>
+            <div class="reseña">
+                <img src="./images/imagenes-reseñas/Imagen-perfil-4.avif" alt="">
+                <p>"Las zapatillas son muy cómodas y combinan perfecto. Me encantan!"</p>
+            </div>
+            <div class="reseña">
+                <img src="./images/imagenes-reseñas/Imagen-perfil-5.avif" alt="">
+                <p>"Compre un par para mi hijo y quedó encantado, muy recomendadas!!"</p>
+            </div>
+             <div class="reseña">
+                <img src="./images/imagenes-reseñas/imagen-perfil-6.jpg" alt="">
+                <p>"Me encontré su publicidad en instagram y encontré las zapatillas que tanto buscaba, que suerte que tenían de todas las tallas."</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contacto">
+        <h2 class="subtitle">Contactanos!</h2>
+
+        <div class="contacto">
+            <form action="https://formspree.io/f/xdkgbbeb" method="POST" class="formulario">
+                <label for="email" class="label-email">Email:</label>
+                <input type="email" name="email" id="email"  placeholder="Ingrese su email" required class="input-email">
+                <label for="message" class="label-mensaje">Mensaje:</label>
+                <textarea name="message" id="message" rows="4" cols="50" placeholder="Escribe tu mensaje" class="input-mensaje"></textarea>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </div>    
+    </section>
+
+    <footer>
+        <div class="flex-footer">
+            <div class="footer-logo">
+                <img src="./images/logo.svg" alt="logo">
+            </div>
+            <div class="footer-info">
+                <div class="footer-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
+                <div class="footer-info-item">   
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email:SneakersShoes@gmail.com</p>
+                </div>
+                
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
