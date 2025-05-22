@@ -334,6 +334,10 @@ footer{
 
 
     /*Formulario*/
+    .contacto{
+        margin-bottom: 4rem;
+    }
+
     .formulario {
         padding: 20px;
         width: 85%;
