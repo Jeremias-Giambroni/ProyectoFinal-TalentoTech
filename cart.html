@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="https://kit.fontawesome.com/0f286be12c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="./js/zapatillas.js"></script>
+    <script src="./js/cart.js" defer></script>
+    <script src="./js/cartService.js" defer></script>
+    <title>Sneakers - Carrito</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img class="logo-header" src="./images/logo.svg" alt="logo"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="./index.html">Productos</a>
+                </li>
+                <li>
+                    <a href="./index.html#reseñas">Reseñas</a>
+                </li>
+                <li>
+                    <a href="index.html#contacto">Contacto</a>
+                </li>
+                
+            </ul>
+
+            <div class="carrito">
+                <a href="./cart.html" id="cart"><img src="images/cart/shopping-cart.png" alt="Carrito de compras"><span id="cuenta-carrito">0</span></a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="./index.html">elige algunos productos</a></p>
+		
+        <section id="productos-container">
+
+		</section>
+
+        <section id="totales">
+            <p>Total unidades: <span id="cantidad">0</span></p>
+            <p>Total precio: $<span id="precio">0</span></p>
+            <div class="button-container">
+                <button disabled class="button">Comprar</button>
+                <button id="reiniciar" class="button">Reiniciar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="flex-footer">
+            <div class="footer-logo">
+                <a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
+                <div class="footer-info-item">   
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email:SneakersShoes@gmail.com</p>
+                </div>
+                
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

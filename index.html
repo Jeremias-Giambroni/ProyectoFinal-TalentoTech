@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <script src="https://kit.fontawesome.com/0f286be12c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Maqueta Proyecto</title>
+    <script src="./js/zapatillas.js"></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/cartService.js" defer></script>
+
+    <title>Sneakers</title>
 </head>
 <body>
     
@@ -32,43 +37,15 @@
             </ul>
 
             <div class="carrito">
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="./cart.html" id="cart"><img src="images/cart/shopping-cart.png" alt="Carrito de compras"><span id="cuenta-carrito">0</span></a>
             </div>
 
         </nav>
     </header>
 
 
-    <main id="main">
-        <div class="productos">
-            <div class="producto">
-                <img src="./images/imagenes-zapatillas/zapatilla-1.png" alt="Zapatilla 1">
-                <h3>Nike Air Jordan 1 High de Travis Scott</h3>
-                <p>Precio: $200</p>
-                <button class="button">Agregar al Carrito</button>
-            </div>
-            <div class="producto">
-                <img src="./images/imagenes-zapatillas/zapatilla-2.png" alt="Zapatilla 2">
-                <h3>Air Jordan 1 Low 'Legend Coffee'</h3>
-                <p>Precio: $120</p>
-                <button class="button">Agregar al Carrito</button>
-            </div>
-            <div class="producto">
-                <img src="./images/imagenes-zapatillas/zapatilla-3.png" alt="Zapatilla 3">
-                <h3>Bad Bunny "The First Cafe"</h3>
-                <p>Precio: $150</p>
-                <button class="button">Agregar al Carrito</button>
-            </div>
-            <div class="producto">
-                <img src="./images/imagenes-zapatillas/zapatilla-4.png" alt="Zapatilla 4">
-                <h3>Zapatillas Puma Palermo</h3>
-                <p>Precio: $130</p>
-                <button class="button">Agregar al Carrito</button>
-            </div>
-        </div>
-            <div class="button-ver-mas">
-                <button class="button2">Ver más productos</button>
-            </div>
+    <main>
+       <section id="productos-container"></section>
     </main>
 
     <section id="reseñas">
@@ -121,7 +98,7 @@
     <footer>
         <div class="flex-footer">
             <div class="footer-logo">
-                <img src="./images/logo.svg" alt="logo">
+                <a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
             </div>
             <div class="footer-info">
                 <div class="footer-info-item">
