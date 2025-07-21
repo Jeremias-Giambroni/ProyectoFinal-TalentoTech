@@ -82,7 +82,7 @@ document.getElementById("reiniciar").addEventListener("click", () => {
 document.getElementById("comprar").addEventListener("click", () => {
   const productos = JSON.parse(localStorage.getItem("zapatillas"));
   if (productos && productos.length > 0) {
-    alert("¡Gracias por tu compra! Tu pedido está siendo procesado.");
+    alert("¡Gracias por tu compra! Tu carrito se ha reiniciado.");
     reiniciarCarrito(); 
     revisarMensajeVacio();
     actualizarTotales();

@@ -50,6 +50,10 @@ main{
     align-items: center;
     gap: 10px;
 }
+.carrito-vacio a{
+    color: var(--text-color);
+    text-decoration: underline;
+}
 
 #totales{
     display: flex;
@@ -85,11 +89,12 @@ main{
 }
 
 @media (max-width: 530px){
+
+
     .tarjeta-producto img{
         height: 130px;
         aspect-ratio: 1.4;
     }
-    
 
     .tarjeta-producto p{
         font-size: 1.2rem;

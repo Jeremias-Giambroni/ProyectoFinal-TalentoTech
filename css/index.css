@@ -56,7 +56,7 @@
 }
 
 
-@media (max-width: 560px){
+@media (max-width: 450px){
 
   .tarjeta-producto{
     max-width: 75%;
@@ -64,12 +64,13 @@
   }
   .tarjeta-producto img{
     max-width:75%;
+    aspect-ratio: 1.4;
   }
   .tarjeta-producto h3{
     font-size: 1rem;
   }
   .tarjeta-producto button{
     font-size: 0.8rem;
-    padding: 10px 15px;
+    padding: 5px 10px;
   }
 }
