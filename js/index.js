@@ -4,11 +4,11 @@ const contenedorTarjetas = document.getElementById("productos-container");
 function crearTarjetasProductosIncio(productos){
     productos.forEach(producto => {
         const nuevaZapatilla = document.createElement("div");
-        nuevaZapatilla.classList.add("tarjeta-producto");
+        nuevaZapatilla.classList ="tarjeta-producto";
         nuevaZapatilla.innerHTML = `
         <img src= "./images/imagenes-zapatillas/${producto.id}.png">
         <h3>${producto.nombre}</h3>
-        <p>$${producto.precio}</p>
+        <p class= "precio">$${producto.precio}</p>
         <button>Agregar al Carrito</button>
         `
         contenedorTarjetas.appendChild(nuevaZapatilla);

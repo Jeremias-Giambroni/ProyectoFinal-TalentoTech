@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script src="./js/zapatillas.js"></script>
-    <script src="./js/cart.js" defer></script>
     <script src="./js/cartService.js" defer></script>
+    <script src="./js/cart.js" defer></script>
     <title>Sneakers - Carrito</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
     <main>
 		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="./index.html">elige algunos productos</a></p>
 		
-        <section id="productos-container">
+        <section id="cart-container">
 
 		</section>
 
@@ -54,7 +54,7 @@
             <p>Total unidades: <span id="cantidad">0</span></p>
             <p>Total precio: $<span id="precio">0</span></p>
             <div class="button-container">
-                <button disabled class="button">Comprar</button>
+                <button id="comprar" class="button">Comprar</button>
                 <button id="reiniciar" class="button">Reiniciar</button>
             </div>
         </section>

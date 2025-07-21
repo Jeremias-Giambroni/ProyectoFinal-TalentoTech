@@ -1,15 +1,14 @@
-const contenedorTarjetas = document.getElementById("productos-container");
-const unidadesElement = document.getElementById("cantidad");
+const contenedorTarjetas = document.getElementById("cart-container");
+const cantidadElement = document.getElementById("cantidad");
 const precioElement = document.getElementById("precio");
 const carritoVacioElement = document.getElementById("carrito-vacio");
-const totalesElement = document.getElementById("totales");
-const reiniciarCarritoElement = document.getElementById("reiniciar");
+const totalesContainer = document.getElementById("totales");
+
 
 /** Crea las tarjetas de productos teniendo en cuenta la lista en zapatillas.js */
-function crearTarjetasProductosIncio(){
+function crearTarjetasProductosCarrito(){
   contenedorTarjetas.innerHTML = ""; // Limpia el contenedor antes de agregar nuevas tarjetas
   const productos = JSON.parse(localStorage.getItem(keyLocalstorage));
-  console.log(productos);
   if (productos && productos.length > 0) {
     productos.forEach(producto => {
       const nuevaZapatilla = document.createElement("div");
@@ -27,52 +26,75 @@ function crearTarjetasProductosIncio(){
       contenedorTarjetas.appendChild(nuevaZapatilla);
       
       nuevaZapatilla
-        .getElementsByTagName("button")[1]
+        .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
-          const cuentaElement = e.target.parentElement.getElementsByTagName("span")[0];
-          cuentaElement.innerText = agregarAlCarrito(producto);
+          const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
+          cantidadElement.innerText = restarAlCarrito(producto);
+          crearTarjetasProductosCarrito();
           actualizarTotales();
         });
       nuevaZapatilla
-        .getElementsByTagName("button")[0]
+        .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
-          restarAlCarrito(producto)
-          crearTarjetasProductosIncio() 
+          const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
+          cantidadElement.innerText = agregarAlCarrito(producto);
           actualizarTotales();
         });
     });
   }
-}
-
-crearTarjetasProductosIncio()
-actualizarTotales
-
-function actualizarTotales(){
-  const productos = JSON.parse(localStorage.getItem("zapatillas"));
-  let unidades = 0;
-  let precio = 0;
-  if(productos && productos.length > 0) {
-    productos.forEach(producto => {
-      unidades += producto.cantidad;
-      precio += producto.precio * producto.cantidad;
-    })
-    unidadesElement.innerText = unidades;
-    precioElement.innerText = precio
-  }
-}
-
-function revisarMensajeVacio(){
-  const productos = JSON.parse(localStorage.getItem("zapatillas"));
-  carritoVacioElement.classList.toggle("escondido",productos && productos.length > 0);
-  totalesElement.classList.toggle("escondido", !(productos && productos.length > 0));
-}
-
-revisarMensajeVacio();
-
-
-reiniciarCarritoElement.addEventListener("click", reiniciarCarrito);
-function reiniciarCarrito(){
-  localStorage.removeItem("zapatillas");
+  revisarMensajeVacio();
   actualizarTotales();
-  crearTarjetasProductosIncio();
+  actualizarNumeroCarrito();
+}
+
+crearTarjetasProductosCarrito();
+
+
+/** Actualiza el total de precio y unidades de la página del carrito */
+
+function actualizarTotales() {
+  const productos = JSON.parse(localStorage.getItem(keyLocalstorage));
+  let cantidad = 0;
+  let precio = 0;
+  if (productos && productos.length > 0) {
+    productos.forEach((producto) => {
+      cantidad += producto.cantidad;
+      precio += producto.precio * producto.cantidad;
+    });
+  } 
+  cantidadElement.innerText = cantidad;
+  precioElement.innerText = precio;
+  if (precio === 0){
+    contenedorTarjetas.innerHTML = "";
+    reiniciarCarrito();
+    revisarMensajeVacio();
+  }
+  
+}
+
+document.getElementById("reiniciar").addEventListener("click", () => {
+  contenedorTarjetas.innerHTML = "";
+  reiniciarCarrito();
+  revisarMensajeVacio();
+  actualizarTotales();
+});
+
+document.getElementById("comprar").addEventListener("click", () => {
+  const productos = JSON.parse(localStorage.getItem("zapatillas"));
+  if (productos && productos.length > 0) {
+    alert("¡Gracias por tu compra! Tu pedido está siendo procesado.");
+    reiniciarCarrito(); 
+    revisarMensajeVacio();
+    actualizarTotales();
+  } else {
+    alert("Tu carrito está vacío. Agregá algún producto para poder comprar.");
+  }
+});
+
+
+/** Muestra o esconde el mensaje de que no hay nada en el carrito */
+function revisarMensajeVacio(){
+  const productos = JSON.parse(localStorage.getItem(keyLocalstorage));
+  carritoVacioElement.classList.toggle("escondido", productos);
+  totalesContainer.classList.toggle("escondido", !productos)
 }
